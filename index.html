@@ -1,34 +1,164 @@
-<html>
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Carabanchel</title>
 
     <style>
-        body {background-image: url("MesaBolivar.jpg");
-}
-        h1 {color:white;
-}
-        button {
-         background-color: #3498db;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("MesaBolivar.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* MAIN CONTENT */
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            max-width: 600px;
+        }
+
+        /* BUTTON */
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:hover {
+            background-color: #217dbb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 18px 20px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
- <h1>Welcome to Carabanchel</h1>
- <a
- href="CIC.pdf" target="_blank">
-    <button>Click Me</button>
- </a>
+    <header>
+        <div class="logo">CARABANCHEL</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+
+        <h1>Welcome to Carabanchel</h1>
+
+        <p>
+            Discover more about Carabanchel and explore the information available.
+        </p>
+
+        <a href="CIC.pdf" target="_blank" class="button">
+            View PDF
+        </a>
+
+    </main>
 
 </body>
 </html>
-
+```
 
